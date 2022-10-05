@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<connectionStrings>  
+  <add name="conexion" connectionString="Data Source=IWDEV1-HP\SQLEXPRESS;Initial Catalog=WorldWideCraft; Connect Timeout=200; Persist Security Info=True;User ID=UserWorldWideCraft;Password=UserWorldWideCraft1234" providerName="System.Data.SqlClient" />
+</connectionStrings>

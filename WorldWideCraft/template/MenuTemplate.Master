@@ -1,0 +1,101 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="MenuTemplate.master.vb" Inherits="WorldWideCraft.MenuTemplate" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Index</title>
+    <link rel='stylesheet' type='text/css' media='screen' href="../css/template.css" />
+    <link rel='stylesheet' type='text/css' media='screen' href="../css/stylepage.css" />
+    <link rel='stylesheet' type='text/css' media='screen' href="../css/jqx.base.css" />
+
+    <script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../js/jqxcore.js"></script>
+    <script type="text/javascript" src="../js/jqxsplitter.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#mainSplitter').jqxSplitter({ width: '100%', height: '100%', orientation: 'horizontal', panels: [{ size: '50%', collapsible: false }] });
+        });
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:Table runat="server" Width="100%" CellPadding="0" CellSpacing="0">
+            <asp:TableRow runat="server">
+                <asp:TableCell runat="server" CssClass="table-header">
+                    <asp:Table runat="server" CellPadding="0" CellSpacing="0" Width="100%">
+                        <asp:TableRow runat="server">
+                            <asp:TableCell runat="server">
+                                <asp:Label runat="server" ID="lblname" />
+                            </asp:TableCell>
+                            <asp:TableCell runat="server" HorizontalAlign="Right">
+                                <asp:LinkButton Text="Cerrar Sesion" runat="server" OnClick="CerrarSesion" />
+                            </asp:TableCell>
+                        </asp:TableRow>
+                    </asp:Table>
+                </asp:TableCell>
+            </asp:TableRow>
+            <asp:TableRow runat="server">
+                <asp:TableCell runat="server" CssClass="table-content">
+                    <div style="display:flex;">
+                        <div class="table-menu">
+                            <div id="menu" class="vertical-menu">
+                                <a href="../Inicio.aspx">
+                                    <img src="../img/icon-home.png" width="14" height="11">
+                                    <asp:Label runat="server" Text="Inicio"></asp:Label>                               
+                                </a>
+                                <a href="../Productos.aspx">
+                                    <img src="../img/icon-products.png" width="14" height="14">
+                                    <asp:Label runat="server" Text="Productos"></asp:Label>
+                                </a>
+                                <a href="../Clientes.aspx">
+                                    <img src="../img/icon-person.png" width="14" height="17">
+                                    <asp:Label runat="server" Text="Clientes"></asp:Label>
+                                </a>
+                                <a href="../NuevaBase.aspx">
+                                    <img src="../img/icon-excel.png" width="14" height="16">
+                                    <asp:Label runat="server" Text="Cargar Base"></asp:Label>
+                                </a>
+                            </div>
+                        </div>
+                        <div style="width:100%;height:100vh;">
+                            <div id="mainSplitter">
+                                <div class="main-content-splitter">
+                                   <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                                <div class="main-content-splitter">
+                                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                            </div>
+                        </div>
+                    </div>                                   
+                </asp:TableCell>
+            </asp:TableRow>
+        </asp:Table>
+
+        <script type="text/javascript">
+            var contentmenu = document.getElementById("menu");
+
+            if(contentmenu != null) {
+                var links = contentmenu.querySelectorAll("a");
+
+                for (var i = 0; i < links.length; i++) {
+                    links[i].classList.remove("active");
+        
+                    if (links[i].href.toLowerCase().includes(window.location.pathname.toLowerCase())){
+                        links[i].classList.add("active");
+                    }
+                }
+            }
+        </script>
+    </form>
+</body>
+</html>
