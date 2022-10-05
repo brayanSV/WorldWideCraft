@@ -1,0 +1,246 @@
+/****** Object:  Database [WorldWideCraft]    Script Date: 27/09/2022 09:00:00 a.m. ******/
+USE [master]
+GO
+
+CREATE DATABASE [WorldWideCraft] ON  PRIMARY 
+( NAME = N'WorldWideCraft', FILENAME = N'c:\Program Files\Microsoft SQL Server\MSSQL10_50.SQLEXPRESS\MSSQL\DATA\WorldWideCraft.mdf' , SIZE = 3072KB , MAXSIZE = UNLIMITED, FILEGROWTH = 1024KB )
+ LOG ON 
+( NAME = N'WorldWideCraft_log', FILENAME = N'c:\Program Files\Microsoft SQL Server\MSSQL10_50.SQLEXPRESS\MSSQL\DATA\WorldWideCraft_log.ldf' , SIZE = 1024KB , MAXSIZE = 2048GB , FILEGROWTH = 10%)
+GO
+
+ALTER DATABASE [WorldWideCraft] SET COMPATIBILITY_LEVEL = 100
+GO
+
+IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+begin
+EXEC [WorldWideCraft].[dbo].[sp_fulltext_database] @action = 'enable'
+end
+GO
+
+ALTER DATABASE [WorldWideCraft] SET ANSI_NULL_DEFAULT OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET ANSI_NULLS OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET ANSI_PADDING OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET ANSI_WARNINGS OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET ARITHABORT OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET AUTO_CLOSE OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET AUTO_CREATE_STATISTICS ON 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET AUTO_SHRINK OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET AUTO_UPDATE_STATISTICS ON 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET CURSOR_CLOSE_ON_COMMIT OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET CURSOR_DEFAULT  GLOBAL 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET CONCAT_NULL_YIELDS_NULL OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET NUMERIC_ROUNDABORT OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET QUOTED_IDENTIFIER OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET RECURSIVE_TRIGGERS OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET  DISABLE_BROKER 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET DATE_CORRELATION_OPTIMIZATION OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET TRUSTWORTHY OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET PARAMETERIZATION SIMPLE 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET READ_COMMITTED_SNAPSHOT OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET HONOR_BROKER_PRIORITY OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET RECOVERY SIMPLE 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET  MULTI_USER 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET PAGE_VERIFY CHECKSUM  
+GO
+
+ALTER DATABASE [WorldWideCraft] SET DB_CHAINING OFF 
+GO
+
+ALTER DATABASE [WorldWideCraft] SET  READ_WRITE 
+GO
+
+/****** Object:  Table [dbo].[usuarios]    Script Date: 27/09/2022 08:48:29 a.m. ******/
+USE [WorldWideCraft]
+GO
+
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+SET ANSI_PADDING ON
+GO
+
+CREATE TABLE [dbo].[usuarios](
+	[usuarioid] [int] IDENTITY(1000,1) NOT NULL,
+	[usuario] [varchar](50) NULL,
+	[passw] [varbinary](500) NULL,
+	[nombre] [varchar](150) NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+/****** Object:  StoredProcedure [dbo].[sp_validateUser]    Script Date: 27/09/2022 08:58:16 a.m. ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[sp_validateUser]
+@usuario varchar(50),
+@passw varchar(50),
+@patron varchar(50)
+as
+	if (
+		select top 1 usuarios.usuarioid
+		  from usuarios 
+		 where usuario = @usuario 
+		   and CONVERT(varchar(50), DECRYPTBYPASSPHRASE(@patron, passw)) = @passw
+		) is null
+		return -1
+	else
+		return 1
+GO
+
+/****** Object:  Table [dbo].[estadosregistros]    Script Date: 27/09/2022 08:48:49 a.m. ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[estadosregistros](
+	[estadoregistroID] [int] IDENTITY(1,1) NOT NULL,
+	[estadoergistro] [nvarchar](250) NOT NULL,
+ CONSTRAINT [PK_estadosregistros] PRIMARY KEY CLUSTERED 
+(
+	[estadoregistroID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+USE [WorldWideCraft]
+GO
+
+/****** Object:  Table [dbo].[clientes]    Script Date: 27/09/2022 08:49:04 a.m. ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[clientes](
+	[clienteId] [int] IDENTITY(1,1) NOT NULL,
+	[nombre] [nvarchar](250) NOT NULL,
+	[nit] [nvarchar](250) NOT NULL,
+	[estadoregistroId] [int] NOT NULL,
+ CONSTRAINT [PK_clientes] PRIMARY KEY CLUSTERED 
+(
+	[clienteId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[clientes]  WITH CHECK ADD  CONSTRAINT [FK_clientes_estadosregistros] FOREIGN KEY([estadoregistroId])
+REFERENCES [dbo].[estadosregistros] ([estadoregistroID])
+GO
+
+ALTER TABLE [dbo].[clientes] CHECK CONSTRAINT [FK_clientes_estadosregistros]
+GO
+
+USE [WorldWideCraft]
+GO
+
+/****** Object:  Table [dbo].[sucursales]    Script Date: 27/09/2022 08:49:18 a.m. ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[sucursales](
+	[sucursalId] [int] IDENTITY(1,1) NOT NULL,
+	[codigosuc] [nvarchar](50) NOT NULL,
+	[nombre] [nvarchar](max) NOT NULL,
+	[direccion] [nvarchar](max) NOT NULL,
+	[telefono] [nvarchar](50) NULL,
+	[clienteId] [int] NOT NULL,
+	[estadoregistroId] [int] NOT NULL,
+ CONSTRAINT [PK_sucursales] PRIMARY KEY CLUSTERED 
+(
+	[sucursalId] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+GO
+
+ALTER TABLE [dbo].[sucursales]  WITH CHECK ADD  CONSTRAINT [FK_sucursales_clientes] FOREIGN KEY([clienteId])
+REFERENCES [dbo].[clientes] ([clienteId])
+GO
+
+ALTER TABLE [dbo].[sucursales] CHECK CONSTRAINT [FK_sucursales_clientes]
+GO
+
+ALTER TABLE [dbo].[sucursales]  WITH CHECK ADD  CONSTRAINT [FK_sucursales_estadosregistros] FOREIGN KEY([estadoregistroId])
+REFERENCES [dbo].[estadosregistros] ([estadoregistroID])
+GO
+
+ALTER TABLE [dbo].[sucursales] CHECK CONSTRAINT [FK_sucursales_estadosregistros]
+GO
+
+insert into usuarios(usuario, passw, nombre) values ('yelianagomez', ENCRYPTBYPASSPHRASE('admin', 'admin123'), 'Yaneth Gomez')
+insert into usuarios(usuario, passw, nombre) values ('ccanas', ENCRYPTBYPASSPHRASE('admin', 'admin123'), 'Cesar Canas')
+insert into usuarios(usuario, passw, nombre) values ('arpachon', ENCRYPTBYPASSPHRASE('admin', 'admin123'), 'Andres Pachon ')
+
+
+
+
