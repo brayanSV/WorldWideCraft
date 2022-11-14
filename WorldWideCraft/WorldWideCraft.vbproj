@@ -151,6 +151,7 @@
     <Content Include="img\icon-person.png" />
     <Content Include="img\icon-products.png" />
     <Content Include="img\imagen_logo.png" />
+    <Content Include="img\icon-informe.png" />
     <Content Include="Index.aspx" />
     <Content Include="Inicio.aspx" />
     <Content Include="js\jquery-1.11.1.min.js" />
@@ -158,6 +159,7 @@
     <Content Include="js\jqxcore.js" />
     <Content Include="js\jqxsplitter.js" />
     <Content Include="NuevaBase.aspx" />
+    <Content Include="Informes.aspx" />
     <Content Include="Productos.aspx" />
     <Content Include="Web.config" />
     <Content Include="xmlconfig\ConexionTotal.xml" />
@@ -209,6 +211,13 @@
     </Compile>
     <Compile Include="NuevaBase.aspx.vb">
       <DependentUpon>NuevaBase.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Informes.aspx.designer.vb">
+      <DependentUpon>Informes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Informes.aspx.vb">
+      <DependentUpon>Informes.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Productos.aspx.designer.vb">

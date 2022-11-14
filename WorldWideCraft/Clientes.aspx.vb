@@ -64,7 +64,7 @@ Public Class Clientes
 
     Protected Sub OnPageIndexChanging(sender As Object, e As GridViewPageEventArgs)
         gridClientes.PageIndex = e.NewPageIndex
-        gridClientes.DataBind()
+        CargarClientes(Me, New EventArgs)
     End Sub
 
     Protected Sub gridClientes_RowDataBound(sender As Object, e As GridViewRowEventArgs)

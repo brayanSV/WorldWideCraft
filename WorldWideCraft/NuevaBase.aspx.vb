@@ -71,7 +71,7 @@ Public Class NuevaBase
 
     Protected Sub OnPageIndexChanging(sender As Object, e As GridViewPageEventArgs)
         gridCargaExcel.PageIndex = e.NewPageIndex
-        gridCargaExcel.DataBind()
+        CargarCargaExcel(Me, New EventArgs)
     End Sub
 
     Protected Sub gridCargaExcel_RowDataBound(sender As Object, e As GridViewRowEventArgs)

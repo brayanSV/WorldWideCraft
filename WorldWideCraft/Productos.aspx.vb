@@ -62,7 +62,7 @@ Public Class Productos
 
     Protected Sub OnPageIndexChanging(sender As Object, e As GridViewPageEventArgs)
         gridProductos.PageIndex = e.NewPageIndex
-        gridProductos.DataBind()
+        CargarProductos(Me, New EventArgs)
     End Sub
 
     Protected Sub gridProductos_RowDataBound(sender As Object, e As GridViewRowEventArgs)
