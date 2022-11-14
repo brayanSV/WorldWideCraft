@@ -74,7 +74,7 @@
             for (var i = 0; i < links.length; i++) {
                 links[i].classList.remove("active");
 
-                if (status == "new" && links[i].innerHTML == "Nuevo") {
+                if (status == "news" && links[i].innerHTML == "Nuevo") {
                     links[i].classList.add("active");
                 } else if (status == "edit" && links[i].innerHTML == "Editar") {
                     links[i].classList.add("active");
@@ -122,7 +122,22 @@
             </div>
         </asp:Panel>
         <asp:Panel runat="server" ID="pnlread">
-            lectura
+            <div class="centrar forms">
+                <p>
+                    <asp:Label runat="server" Text="Cliente" />
+                    <asp:TextBox CssClass="styletext" runat="server" id="txbnombrelect" Enabled="false"/>
+                </p>
+                <p>
+                    <asp:Label runat="server" Text="Nit" />
+                    <asp:TextBox CssClass="styletext" runat="server" id="txbnitlect" Enabled="false" />
+                </p>
+                <p>
+                    <asp:Label runat="server" Text="Telefono" />
+                    <asp:TextBox CssClass="styletext" TextMode="Number" runat="server"  id="txbtelefonolect" Enabled="false" />
+                </p>
+
+                <asp:Button CssClass="stylebutton" Text="Volver" runat="server" OnClick="volver"/>
+            </div>
         </asp:Panel>
     </div>
     

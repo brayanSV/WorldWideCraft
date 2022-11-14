@@ -188,6 +188,33 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:WorldWideCraft.Clientes._txbnombrelect">
+<summary>
+Control txbnombrelect.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Clientes._txbnitlect">
+<summary>
+Control txbnitlect.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Clientes._txbtelefonolect">
+<summary>
+Control txbtelefonolect.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:WorldWideCraft.Index._form1">
 <summary>
 Control form1.
@@ -227,6 +254,375 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:WorldWideCraft.Index._lblerror">
 <summary>
 Control lblerror.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._hiddenAction">
+<summary>
+Control hiddenAction.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._lblfileId">
+<summary>
+Control lblfileId.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._lblerror">
+<summary>
+Control lblerror.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._lectura">
+<summary>
+Control lectura.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._pnlGridCargaExcel">
+<summary>
+Control pnlGridCargaExcel.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._gridCargaExcel">
+<summary>
+Control gridCargaExcel.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._pnlnohayCargaExcel">
+<summary>
+Control pnlnohayCargaExcel.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._pnlnohaydatos">
+<summary>
+Control pnlnohaydatos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._pnlnewedit">
+<summary>
+Control pnlnewedit.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._ddltipoarchivo">
+<summary>
+Control ddltipoarchivo.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._valFileUpload1">
+<summary>
+Control valFileUpload1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._FileUpload1">
+<summary>
+Control FileUpload1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._btneditnew">
+<summary>
+Control btneditnew.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._pnlread">
+<summary>
+Control pnlread.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._txbtypefilelect">
+<summary>
+Control txbtypefilelect.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._txbfilenamelect">
+<summary>
+Control txbfilenamelect.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._txbdatefilelect">
+<summary>
+Control txbdatefilelect.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._txbtotalnewlect">
+<summary>
+Control txbtotalnewlect.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._txbtotalupdatelect">
+<summary>
+Control txbtotalupdatelect.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.NuevaBase._txbtotaldeletelect">
+<summary>
+Control txbtotaldeletelect.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._scriptManager">
+<summary>
+Control scriptManager.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._hiddenAction">
+<summary>
+Control hiddenAction.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._lblproductoId">
+<summary>
+Control lblproductoId.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._lblerror">
+<summary>
+Control lblerror.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._lectura">
+<summary>
+Control lectura.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._pnlgridProductos">
+<summary>
+Control pnlgridProductos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._gridProductos">
+<summary>
+Control gridProductos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._pnlnohayProductos">
+<summary>
+Control pnlnohayProductos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._pnlnohaydatos">
+<summary>
+Control pnlnohaydatos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._pnlnewedit">
+<summary>
+Control pnlnewedit.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._valFileUpload1">
+<summary>
+Control valFileUpload1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._FileUpload1">
+<summary>
+Control FileUpload1.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._txbnombre">
+<summary>
+Control txbnombre.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._txbreferencia">
+<summary>
+Control txbreferencia.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._txbdescripcion">
+<summary>
+Control txbdescripcion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._btneditnew">
+<summary>
+Control btneditnew.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._pnlread">
+<summary>
+Control pnlread.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._imgfotoprodlect">
+<summary>
+Control imgfotoprodlect.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._txbnombrelect">
+<summary>
+Control txbnombrelect.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._txbreferencialect">
+<summary>
+Control txbreferencialect.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:WorldWideCraft.Productos._txbdescripcionlect">
+<summary>
+Control txbdescripcionlect.
 </summary>
 <remarks>
 Campo generado automáticamente.

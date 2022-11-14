@@ -297,7 +297,41 @@ Public Class Clientes
         pnlnewedit.Visible = False
         pnlnohaydatos.Visible = False
         lblclienteId.Text = e.CommandArgument
+
+        Dim connectionString As New SqlConnection(ConfigurationManager.ConnectionStrings("conexion").ToString)
+        connectionString.Open()
+
+        Dim commandString As String = ""
+        commandString = "	select distinct clientes.clienteId, " &
+                        "					clientes.nombre, " &
+                        "					clientes.nit, " &
+                        "					clientes.telefono " &
+                        "			   from clientes " &
+                        "			  where clientes.clienteId = '" & lblclienteId.Text & "' "
+
+        Dim myDataAdapter As New System.Data.SqlClient.SqlDataAdapter(commandString, connectionString)
+
+        Dim myDataSet As New Data.DataSet()
+        myDataAdapter.Fill(myDataSet, "clientes")
+
+        Dim bandhaydatos As Boolean = False
+        If myDataSet.Tables("clientes").Rows.Count > 0 Then
+            If Not IsDBNull(myDataSet.Tables("clientes").Rows(0)("clienteId")) Then
+                bandhaydatos = True
+
+                txbnombrelect.Text = myDataSet.Tables("clientes").Rows(0)("nombre")
+                txbnitlect.Text = myDataSet.Tables("clientes").Rows(0)("nit")
+                txbtelefonolect.Text = myDataSet.Tables("clientes").Rows(0)("telefono")
+            End If
+        End If
+
+        connectionString.Close()
     End Sub
 
+    Protected Sub volver(ByVal sender As Object, ByVal e As EventArgs)
+        lblclienteId.Text = "0"
+        hiddenAction.Value = "read"
 
+        Empezar(Me, New EventArgs)
+    End Sub
 End Class

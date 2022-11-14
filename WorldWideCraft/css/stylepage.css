@@ -58,7 +58,11 @@
 }
 
     .forms span {
-        display: block;
+        display: inline-block;
+    }
+
+    .forms p {
+        margin-top: 0px;
     }
 
     .forms .styletext {
@@ -123,4 +127,7 @@
     color: #000000;
     font-weight: normal;
     background: #DCE6F1;
+}
+.image-form-lect {
+    margin: 10px auto 0 auto;
 }
